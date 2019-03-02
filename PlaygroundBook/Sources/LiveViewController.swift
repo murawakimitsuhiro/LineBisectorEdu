@@ -25,12 +25,6 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         // This happens when the user's code naturally finishes running, if the user presses Stop, or if there is a crash.
     }
     */
-
-    public func receive(_ message: PlaygroundValue) {
-        // Implement this method to receive messages sent from the process running Contents.swift.
-        // This method is *required* by the PlaygroundLiveViewMessageHandler protocol.
-        // Use this method to decode any messages sent as PlaygroundValue values and respond accordingly.
-    }
     
     let baseLineImageView = UIImageView()
     let descriptionTextLabel: UILabel = UILabel()
@@ -53,14 +47,30 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     var startX:CGFloat = 0
     var endX:CGFloat = 0
     
+    
+    public func receive(_ message: PlaygroundValue) {
+        // Implement this method to receive messages sent from the process running Contents.swift.
+        // This method is *required* by the PlaygroundLiveViewMessageHandler protocol.
+        // Use this method to decode any messages sent as PlaygroundValue values and respond accordingly.
+        
+        switch message {
+        case let .string(text):
+            descriptionTextLabel.text = "texttttt\(text)"
+            
+        default:
+            break
+        }
+    }
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor.white
         
-        // let image: UIImage = UIImage(named: "baseLine.png")!
         baseLineImageView.frame = CGRect(x: 0, y: 0, width: 300, height: 18)
+        // not use image
+        // let image: UIImage = UIImage(named: "baseLine.png")!
         // baseLineImageView.image = image
-        
         baseLineImageView.frame.size.height = 1
         baseLineImageView.backgroundColor = UIColor.black
         
@@ -81,7 +91,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         fireButton.titleLabel?.textColor = UIColor.white
         fireButton.titleLabel?.textAlignment = .center
         fireButton.setTitle("スタート", for: .normal)
-        // fireButton.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
+        fireButton.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
         
         view.addSubview(fireButton)
         
@@ -96,7 +106,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         speedStepper.minimumValue = 1
         speedStepper.value = moveSpeed
         speedStepper.stepValue = 1
-        // speedStepper.addTarget(self, action: #selector(stepperCahnged(sender:)), for: .valueChanged)
+        speedStepper.addTarget(self, action: #selector(stepperCahnged(sender:)), for: .valueChanged)
         view.addSubview(speedStepper)
         
         //resetButton
@@ -106,15 +116,13 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         resetButton.setTitle("リセット", for: .normal)
         resetButton.titleLabel?.textColor = UIColor.white
         resetButton.titleLabel?.textAlignment = .center
-        // resetButton.addTarget(self, action: #selector(moveViewPositionReset(sender:)), for: .touchUpInside)
+        resetButton.addTarget(self, action: #selector(moveViewPositionReset(sender:)), for: .touchUpInside)
         view.addSubview(resetButton)
         
         speedLabel.text = "\(moveSpeed)"
         speedLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
         speedLabel.textAlignment = .center
         view.addSubview(speedLabel)
-        
-        // self.view = view
     }
      
     override public func viewDidAppear(_ animated: Bool) {
@@ -139,7 +147,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         startX = (view.frame.width-300)/2
         endX = view.frame.width-startX
     }
-    /*
+    
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
     }
@@ -186,5 +194,5 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         animator?.addAnimations {
             self.moveView.layer.position = CGPoint(x: self.endX, y: 100)
         }
-    }*/
+    }
 }
