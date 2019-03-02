@@ -111,6 +111,8 @@
 		5EF2F9AB2054BBF300191409 /* libBook_Sources.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBook_Sources.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF2F9AD2054BBF300191409 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		5EF2F9B62054E6F900191409 /* Chapters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Chapters; sourceTree = "<group>"; };
+		EA85825B222AFF7400FFAAC8 /* baseLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseLine.png; sourceTree = "<group>"; };
+		EA85825D222B0A4A00FFAAC8 /* baseLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baseLine.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		5E086DC12051C5A7004D8D25 /* PlaygroundBook */ = {
 			isa = PBXGroup;
 			children = (
+				EA85825C222B0A4000FFAAC8 /* PublicResources */,
 				5E086DCF2051DF0F004D8D25 /* Manifest.plist */,
 				5EF2F9A22054BB3E00191409 /* Sources */,
 				5EF2F9792054B64800191409 /* PrivateResources */,
@@ -241,6 +244,7 @@
 		5EF2F9792054B64800191409 /* PrivateResources */ = {
 			isa = PBXGroup;
 			children = (
+				EA85825B222AFF7400FFAAC8 /* baseLine.png */,
 				5EF2F97E2054B6E400191409 /* ManifestPlist.strings */,
 				5E086DCC2051DDAE004D8D25 /* LiveView.storyboard */,
 			);
@@ -262,6 +266,14 @@
 				5EF2F9A52054BBB200191409 /* Sources */,
 			);
 			name = "Supporting Content";
+			sourceTree = "<group>";
+		};
+		EA85825C222B0A4000FFAAC8 /* PublicResources */ = {
+			isa = PBXGroup;
+			children = (
+				EA85825D222B0A4A00FFAAC8 /* baseLine.png */,
+			);
+			path = PublicResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
