@@ -27,11 +27,11 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     */
     
     let baseLineImageView = UIImageView()
-    let descriptionTextLabel: UILabel = UILabel()
-    let moveView:UIView = UIView()
+    public let descriptionTextLabel: UILabel = UILabel()
+    public let moveView:UIView = UIView()
     
-    let fireButton: UIButton = UIButton()
-    let resetButton:UIButton = UIButton()
+    public let fireButton: UIButton = UIButton()
+    public let resetButton:UIButton = UIButton()
     
     let speedStepper = UIStepper()
     let speedLabel = UILabel()
@@ -47,6 +47,8 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     var startX:CGFloat = 0
     var endX:CGFloat = 0
     
+    public var fireButtonAction: ()->() = {}
+    public var resetButtonAction: ()->() = {}
     
     public func receive(_ message: PlaygroundValue) {
         // Implement this method to receive messages sent from the process running Contents.swift.
@@ -105,7 +107,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         speedStepper.maximumValue = 10
         speedStepper.minimumValue = 1
         speedStepper.value = moveSpeed
-        speedStepper.stepValue = 1
+        speedStepper.stepValue = 3
         speedStepper.addTarget(self, action: #selector(stepperCahnged(sender:)), for: .valueChanged)
         view.addSubview(speedStepper)
         
@@ -155,6 +157,9 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     @objc func buttonTapped(sender: UIButton) {
         //button status check
         
+        fireButtonAction()
+        
+        /*
         if buttonStatus {
             //move状態
             buttonStatus = false
@@ -174,7 +179,26 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
             setAnimation()
             animator?.startAnimation()
         }
+        */
+    }
+    
+    public func movePointStart() {
+        buttonStatus = true
+        fireButton.backgroundColor = customRed
+        fireButton.setTitle("ストップ", for: .normal)
         
+        setAnimation()
+        animator?.startAnimation()
+    }
+    
+    public func movePointStop() {
+        buttonStatus = false
+        fireButton.backgroundColor = customBlue
+        fireButton.setTitle("スタート", for: .normal)
+        
+        // moveView.layer.position = CGPoint(x: startX, y: 100)
+        
+        animator?.stopAnimation(true)
     }
     
     @objc func stepperCahnged(sender: UIStepper) {
@@ -184,6 +208,11 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     }
     
     @objc func moveViewPositionReset(sender:UIButton) {
+        resetButtonAction()
+        // self.moveView.layer.position = CGPoint(x: startX, y: 100)
+    }
+    
+    public func pointReset() {
         self.moveView.layer.position = CGPoint(x: startX, y: 100)
     }
     
