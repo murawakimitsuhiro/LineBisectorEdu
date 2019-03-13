@@ -60,6 +60,7 @@ view.fireButtonAction = {
     
     //#-hidden-cod
     // 解答例
+    // (変数定義エリアに変数定義済み)
     if isMoving {
         view.movePointStop()
         isMoving = false
@@ -73,4 +74,9 @@ view.fireButtonAction = {
 view.resetButtonAction = {
     //#-editable-code view.pointReset()
     //#-end-editable-code
+    
+    //#-hidden-cod
+    // 解答例
+    view.pointReset()
+    //#-end-hidden-cod
 }
