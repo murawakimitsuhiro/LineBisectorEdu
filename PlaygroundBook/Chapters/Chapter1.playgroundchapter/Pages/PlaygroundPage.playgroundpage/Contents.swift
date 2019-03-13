@@ -53,9 +53,9 @@ view.speedLabel.center = CGPoint(x: /*#-editable-code placeholder text*/0/*#-end
 
 //#-hidden-code
 // 解答例
-view.resetButton.center = CGPoint(x: viewWidth/4*3, y: viewHeight/10*9)
-view.speedStepper.center = CGPoint(x: viewWidth/10*2, y: viewHeight/10*8)
-view.speedLabel.center = CGPoint(x: viewWidth/5*1, y: viewHeight/10*7)
+// view.resetButton.center = CGPoint(x: viewWidth/4*3, y: viewHeight/10*9)
+// view.speedStepper.center = CGPoint(x: viewWidth/10*2, y: viewHeight/10*8)
+// view.speedLabel.center = CGPoint(x: viewWidth/5*1, y: viewHeight/10*7)
 //#-end-hidden-code
 
 
@@ -85,13 +85,13 @@ view.fireButtonAction = {
     //#-hidden-code
     // 解答例
     // (変数定義エリアに変数定義済み)
-    if isMoving {
-        view.movePointStop()
-        isMoving = false
-    } else {
-        view.movePointStart()
-        isMoving = true
-    }
+//    if isMoving {
+//        view.movePointStop()
+//        isMoving = false
+//    } else {
+//        view.movePointStart()
+//        isMoving = true
+//    }
     //#-end-hidden-code
 }
 
@@ -101,7 +101,7 @@ view.resetButtonAction = {
     
     //#-hidden-code
     // 解答例
-    view.pointReset()
+//    view.pointReset()
     //#-end-hidden-code
 }
 
