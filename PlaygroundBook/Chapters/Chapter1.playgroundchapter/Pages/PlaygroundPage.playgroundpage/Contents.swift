@@ -37,28 +37,52 @@ let green = UIColor(red:0.53, green:0.74, blue:0.45, alpha:1.00)
 var isMoving: Bool = false
 //#-end-hidden-code
 
-//: ボタンの配置をしている
-view.fireButton.center = CGPoint(x: viewWidth/2, y: viewHeight/2)
 
-//: ボタンの色を変える red | green | blue
+
+/*:
+ ## ボタンの配置
+ fireButton(スタート・ストップのボタン)の配置をしています
+ x: や、y: の中を変えたらどのような位置に配置されるか試してみましょう。
+*/
+view.fireButton.center = CGPoint(x: /*#-editable-code placeholder text*/viewWidth/2/*#-end-editable-code*/, y: /*#-editable-code placeholder text*/viewHeight/2/*#-end-editable-code*/)
+
+//: 「リセットボタン」「ステッパー(マイナスとプラスのボタン)」「スピードラベル」も配置してみましょう
+view.resetButton.center = CGPoint(x: /*#-editable-code placeholder text*/0/*#-end-editable-code*/, y: /*#-editable-code placeholder text*/0/*#-end-editable-code*/)
+view.speedStepper.center = CGPoint(x: /*#-editable-code placeholder text*/0/*#-end-editable-code*/, y: /*#-editable-code placeholder text*/0/*#-end-editable-code*/)
+view.speedLabel.center = CGPoint(x: /*#-editable-code placeholder text*/0/*#-end-editable-code*/, y: /*#-editable-code placeholder text*/0/*#-end-editable-code*/)
+
+//#-hidden-code
+// 解答例
+view.resetButton.center = CGPoint(x: viewWidth/4*3, y: viewHeight/10*9)
+view.speedStepper.center = CGPoint(x: viewWidth/10*2, y: viewHeight/10*8)
+view.speedLabel.center = CGPoint(x: viewWidth/5*1, y: viewHeight/10*7)
+//#-end-hidden-code
+
+
+
+/*:
+ ## インターフェースパーツの見た目の変更
+ */
+//: ボタンの色を変えてみましょう red | green | blue
 view.fireButton.backgroundColor = /*#-editable-code placeholder text*/red/*#-end-editable-code*/
-
 view.resetButton.backgroundColor = /*#-editable-code placeholder text*/green/*#-end-editable-code*/
 
-//: 文言を変える
+//: 文言を変えてみましょう
 view.descriptionTextLabel.text = /*#-editable-code placeholder text*/"線の真ん中に来たらボタンを押してください"/*#-end-editable-code*/
 
 
-//: ボタンが押された時のアクションを設定する
+
+/*:
+ ## アクションのプログラム
+ ボタンが押された時のアクションを設定してみましょう
+*/
 view.fireButtonAction = {
-    // ボタンが押されるとこの中が実行される
+    // ボタンが押されるとこの中が実行されます
     // view.movePointStart() | view.movePointStop()
-    // ヒント : 変数を使って、現在丸が「進んでいるのか」「止まっているのか」を記録出来る
-    
+    // ヒント : 変数を使って、現在丸が「進んでいるのか」「止まっているのか」を記録出来ます
     //#-editable-code view.movePointStart()
     //#-end-editable-code
-    
-    //#-hidden-cod
+    //#-hidden-code
     // 解答例
     // (変数定義エリアに変数定義済み)
     if isMoving {
@@ -68,15 +92,18 @@ view.fireButtonAction = {
         view.movePointStart()
         isMoving = true
     }
-    //#-end-hidden-cod
+    //#-end-hidden-code
 }
 
 view.resetButtonAction = {
     //#-editable-code view.pointReset()
     //#-end-editable-code
     
-    //#-hidden-cod
+    //#-hidden-code
     // 解答例
     view.pointReset()
-    //#-end-hidden-cod
+    //#-end-hidden-code
 }
+
+
+

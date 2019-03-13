@@ -19,10 +19,10 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     public let fireButton: UIButton = UIButton()
     public let resetButton:UIButton = UIButton()
     
-    let speedStepper = UIStepper()
-    let speedLabel = UILabel()
+    public let speedStepper = UIStepper()
+    public let speedLabel = UILabel()
     var buttonStatus:Bool = false
-    var moveSpeed:Double = 1
+    public var moveSpeed:Double = 1
     
     let customRed = UIColor(red:0.91, green:0.56, blue:0.56, alpha:1.00)
     let customBlue = UIColor(red:0.58, green:0.74, blue:0.89, alpha:1.00)
@@ -131,11 +131,11 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         // fireButton.layer.position = CGPoint(x: viewWidth/2, y: viewHeight/2)
         
         moveView.layer.position = CGPoint(x: (viewWidth-300)/2, y: 100)
-        speedStepper.layer.position = CGPoint(x: viewWidth/10*2, y: viewHeight/10*9)
+        // speedStepper.layer.position = CGPoint(x: viewWidth/10*2, y: viewHeight/10*9)
         
-        resetButton.layer.position = CGPoint(x: viewWidth/4*3, y: viewHeight/10*9)
+        // resetButton.layer.position = CGPoint(x: viewWidth/4*3, y: viewHeight/10*9)
         
-        speedLabel.layer.position = CGPoint(x: viewWidth/5*1, y: viewHeight/10*8)
+        // speedLabel.layer.position = CGPoint(x: viewWidth/5*1, y: viewHeight/10*8)
         
         startX = (view.frame.width-300)/2
         endX = view.frame.width-startX
@@ -201,6 +201,12 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     @objc func moveViewPositionReset(sender:UIButton) {
         resetButtonAction()
         // self.moveView.layer.position = CGPoint(x: startX, y: 100)
+    }
+    
+    public func setSpeed(_ speed: Double) {
+        let speed = (1 / speed)*10
+        moveSpeed = speed
+        speedLabel.text = "\(speed)"
     }
     
     public func pointReset() {
