@@ -11,21 +11,7 @@ import PlaygroundSupport
 
 @objc(Book_Sources_LiveViewController)
 public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHandler, PlaygroundLiveViewSafeAreaContainer {
-    /*
-    public func liveViewMessageConnectionOpened() {
-        // Implement this method to be notified when the live view message connection is opened.
-        // The connection will be opened when the process running Contents.swift starts running and listening for messages.
-    }
-    */
 
-    /*
-    public func liveViewMessageConnectionClosed() {
-        // Implement this method to be notified when the live view message connection is closed.
-        // The connection will be closed when the process running Contents.swift exits and is no longer listening for messages.
-        // This happens when the user's code naturally finishes running, if the user presses Stop, or if there is a crash.
-    }
-    */
-    
     let baseLineImageView = UIImageView()
     public let descriptionTextLabel: UILabel = UILabel()
     public let moveView:UIView = UIView()
@@ -49,6 +35,8 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     
     public var fireButtonAction: ()->() = {}
     public var resetButtonAction: ()->() = {}
+    public var viewWidth: Int = 0
+    public var viewHeight: Int = 0
     
     public func receive(_ message: PlaygroundValue) {
         // Implement this method to receive messages sent from the process running Contents.swift.
@@ -126,18 +114,21 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         speedLabel.textAlignment = .center
         view.addSubview(speedLabel)
     }
-     
+    
     override public func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         let viewWidth = view.frame.width
         let viewHeight = view.frame.height
         
+        self.viewWidth = Int(viewWidth)
+        self.viewHeight = Int(viewHeight)
+        
         baseLineImageView.layer.position = CGPoint(x: viewWidth/2, y: 100)
         descriptionTextLabel.frame = CGRect(x: 0, y: 0, width: viewWidth-20, height: 50)
         descriptionTextLabel.layer.position = CGPoint(x: viewWidth/2, y: viewHeight/10*3)
         
-        fireButton.layer.position = CGPoint(x: viewWidth/2, y: viewHeight/2)
+        // fireButton.layer.position = CGPoint(x: viewWidth/2, y: viewHeight/2)
         
         moveView.layer.position = CGPoint(x: (viewWidth-300)/2, y: 100)
         speedStepper.layer.position = CGPoint(x: viewWidth/10*2, y: viewHeight/10*9)
