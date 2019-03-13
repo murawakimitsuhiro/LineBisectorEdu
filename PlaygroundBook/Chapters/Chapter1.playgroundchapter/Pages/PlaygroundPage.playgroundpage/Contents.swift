@@ -107,3 +107,13 @@ view.resetButtonAction = {
 
 
 
+/*:
+ ## ステッパーの挙動の変更
+ 丸が動く速度を調整してみましょう。
+ */
+/*:
+ マイナス、プラスを押した時に丸の速さがどれくらい変わるか
+ 値を変更してみましょう
+ */
+view.speedStepper.stepValue = /*#-editable-code placeholder text*/2/*#-end-editable-code*/
+
