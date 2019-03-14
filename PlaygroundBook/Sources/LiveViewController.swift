@@ -57,7 +57,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         
         view.backgroundColor = UIColor(red:0.97, green:0.98, blue:0.98, alpha:1.00)
         
-        baseLineImageView.frame = CGRect(x: 0, y: 0, width: 300, height: 18)
+        baseLineImageView.frame = CGRect(x: 0, y: 0, width: 400, height: 18)
         // not use image
         // let image: UIImage = UIImage(named: "baseLine.png")!
         // baseLineImageView.image = image
@@ -130,14 +130,14 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         
         // fireButton.layer.position = CGPoint(x: viewWidth/2, y: viewHeight/2)
         
-        moveView.layer.position = CGPoint(x: (viewWidth-300)/2, y: 100)
+        moveView.layer.position = CGPoint(x: (viewWidth-baseLineImageView.frame.width)/2, y: 100)
         // speedStepper.layer.position = CGPoint(x: viewWidth/10*2, y: viewHeight/10*9)
         
         // resetButton.layer.position = CGPoint(x: viewWidth/4*3, y: viewHeight/10*9)
         
         // speedLabel.layer.position = CGPoint(x: viewWidth/5*1, y: viewHeight/10*8)
         
-        startX = (view.frame.width-300)/2
+        startX = (view.frame.width - baseLineImageView.frame.width)/2
         endX = view.frame.width-startX
     }
     

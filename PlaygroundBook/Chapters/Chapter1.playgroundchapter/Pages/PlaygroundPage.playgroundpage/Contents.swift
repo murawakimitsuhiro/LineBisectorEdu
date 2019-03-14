@@ -85,13 +85,13 @@ view.fireButtonAction = {
     //#-hidden-code
     // 解答例
     // (変数定義エリアに変数定義済み)
-//    if isMoving {
-//        view.movePointStop()
-//        isMoving = false
-//    } else {
-//        view.movePointStart()
-//        isMoving = true
-//    }
+    if isMoving {
+        view.movePointStop()
+        isMoving = false
+    } else {
+        view.movePointStart()
+        isMoving = true
+    }
     //#-end-hidden-code
 }
 
