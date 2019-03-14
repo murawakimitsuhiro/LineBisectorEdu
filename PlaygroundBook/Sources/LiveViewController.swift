@@ -86,8 +86,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         view.addSubview(fireButton)
         
         //moveView
-        moveView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        moveView.layer.cornerRadius = 15
+        moveView.frame = CGRect(x: 0, y: 0, width: 8, height: 30)
         moveView.backgroundColor = UIColor.green
         view.addSubview(moveView)
         
