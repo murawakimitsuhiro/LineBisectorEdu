@@ -55,7 +55,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(red:0.97, green:0.98, blue:0.98, alpha:1.00)
         
         baseLineImageView.frame = CGRect(x: 0, y: 0, width: 300, height: 18)
         // not use image
