@@ -13,7 +13,7 @@
 			"description": "Many people think that digital signal processing is very complicated and quickly get deterred by mathematical formulas.  This  Playgroundbook shows that the fundamental concepts of DSP are way easier than they might look like with the example of convolving images with filter kernels.",
 			"contentIdentifier": "com.leonardthomas.imagefilter",
 			"contentVersion": "1.3",
-			"url": "https://github.com/lennet/image-filtering/releases/download/1.3/Image.Filtering.playgroundbook.zip",
+      "url": "https://github.com/murawakimitsuhiro/LineBisectorEdu/releases/download/v1.0/LineBisector.playgroundbook.zip",
 			"bannerImageURL": "https://raw.githubusercontent.com/lennet/image-filtering/master/banner_2x.png",
 			"thumbnailURL": "https://raw.githubusercontent.com/lennet/image-filtering/master/Image%20Filtering.playgroundbook/Contents/PrivateResources/cover.png",
 			"publishedDate": "2017-11-14T12:00:00+00:00",
