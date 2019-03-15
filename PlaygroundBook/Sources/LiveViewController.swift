@@ -21,8 +21,10 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     
     public let speedStepper = UIStepper()
     public let speedLabel = UILabel()
-    var buttonStatus:Bool = false
-    public var moveSpeed:Double = 1
+    var buttonStatus: Bool = false
+    
+    public var moveDuration: Double = 1
+    public var movePoint: CGPoint = .zero
     
     let customRed = UIColor(red:0.91, green:0.56, blue:0.56, alpha:1.00)
     let customBlue = UIColor(red:0.58, green:0.74, blue:0.89, alpha:1.00)
@@ -93,7 +95,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         //speedStpper
         speedStepper.maximumValue = 10
         speedStepper.minimumValue = 1
-        speedStepper.value = moveSpeed
+        speedStepper.value = moveDuration
         speedStepper.stepValue = 3
         speedStepper.addTarget(self, action: #selector(stepperCahnged(sender:)), for: .valueChanged)
         view.addSubview(speedStepper)
@@ -108,7 +110,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
         resetButton.addTarget(self, action: #selector(moveViewPositionReset(sender:)), for: .touchUpInside)
         view.addSubview(resetButton)
         
-        speedLabel.text = "\(moveSpeed)"
+        speedLabel.text = "\(moveDuration)"
         speedLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
         speedLabel.textAlignment = .center
         view.addSubview(speedLabel)
@@ -193,7 +195,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     
     @objc func stepperCahnged(sender: UIStepper) {
         let speed = (1 / sender.value)*10
-        moveSpeed = speed
+        moveDuration = speed
         speedLabel.text = "\(sender.value)"
     }
     
@@ -204,7 +206,7 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     
     public func setSpeed(_ speed: Double) {
         let speed = (1 / speed)*10
-        moveSpeed = speed
+        moveDuration = speed
         speedLabel.text = "\(speed)"
     }
     
@@ -214,10 +216,10 @@ public class LiveViewController: UIViewController, PlaygroundLiveViewMessageHand
     
     func setAnimation() {
         let timing = UICubicTimingParameters(animationCurve: .linear)
-        animator = UIViewPropertyAnimator(duration: moveSpeed, timingParameters: timing)
+        animator = UIViewPropertyAnimator(duration: moveDuration, timingParameters: timing)
         
         animator?.addAnimations {
-            self.moveView.layer.position = CGPoint(x: self.endX, y: 100)
+            self.moveView.layer.position = self.movePoint // CGPoint(x: self.endX, y: 100)
         }
     }
 }

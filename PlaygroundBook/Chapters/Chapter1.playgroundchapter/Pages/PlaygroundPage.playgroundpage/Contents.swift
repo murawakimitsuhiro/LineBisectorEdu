@@ -76,6 +76,21 @@ view.descriptionTextLabel.text = /*#-editable-code placeholder text*/"線の真�
 
 
 /*:
+ ## アニメーションの設定
+ 緑色の四角が動く速度と、位置を調整しましょう。
+  - 線は、高さ100に配置されていて、横幅は400です。
+ */
+view.moveDuration = /*#-editable-code placeholder text*/0.5/*#-end-editable-code*/
+view.movePoint = CGPoint(x: /*#-editable-code placeholder text*/0/*#-end-editable-code*/, y: /*#-editable-code placeholder text*/0/*#-end-editable-code*/)
+//#-hidden-code
+// 解答例
+//view.moveDuration = 1.0
+//view.movePoint = CGPoint(x: viewWidth/2 + 200, y: 100)
+//#-end-hidden-code
+
+
+
+/*:
  ## アクションのプログラム
  ボタンが押された時のアクションを設定してみましょう
 */
