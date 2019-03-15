@@ -32,6 +32,9 @@ let green = UIColor(red:0.53, green:0.74, blue:0.45, alpha:1.00)
 
 
 // 変数定義エリア
+//#-editable-code var example = 1
+//#-end-editable-code
+
 //#-hidden-code
 // 解答例
 var isMoving: Bool = false
