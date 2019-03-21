@@ -1,7 +1,7 @@
 {
     "title": "LineBisectorTest",
-    "publisherName": "Murawaki Mitsuhiro",
-    "feedIdentifier": "com.murawaki.playground",
+    "publisherName": "Murawaki.M",
+    "feedIdentifier": "com.murawaki",
     "contactURL": "mitsuhiromurawaki@gmail.com",
     "formatVersion": "1.0",
     "documents": [
@@ -10,7 +10,7 @@
             "overviewSubtitle": "線分二等分試験用のアプリ開発",
             "detailSubtitle": "",
             "description": "",
-            "contentIdentifier": "com.murawaki.playground.LineBisectorTest",
+            "contentIdentifier": "com.murawaki.LineBisectorTest",
             "contentVersion": "1.0",
             "url": "https://github.com/murawakimitsuhiro/LineBisectorEdu/releases/download/v1.0/LineBisectorTest.playgroundbook.zip",
             "publishedDate": "2018-05-18T12:00:00+00:00",
