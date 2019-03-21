@@ -32,6 +32,9 @@ let green = UIColor(red:0.53, green:0.74, blue:0.45, alpha:1.00)
 
 
 // 変数定義エリア
+//#-editable-code var example = 1
+//#-end-editable-code
+
 //#-hidden-code
 // 解答例
 var isMoving: Bool = false
@@ -69,6 +72,21 @@ view.resetButton.backgroundColor = /*#-editable-code placeholder text*/green/*#-
 
 //: 文言を変えてみましょう
 view.descriptionTextLabel.text = /*#-editable-code placeholder text*/"線の真ん中に来たらボタンを押してください"/*#-end-editable-code*/
+
+
+
+/*:
+ ## アニメーションの設定
+ 緑色の四角が動く速度と、位置を調整しましょう。
+  - 線は、高さ100に配置されていて、横幅は400です。
+ */
+view.moveDuration = /*#-editable-code placeholder text*/0.5/*#-end-editable-code*/
+view.movePoint = CGPoint(x: /*#-editable-code placeholder text*/0/*#-end-editable-code*/, y: /*#-editable-code placeholder text*/0/*#-end-editable-code*/)
+//#-hidden-code
+// 解答例
+//view.moveDuration = 1.0
+//view.movePoint = CGPoint(x: viewWidth/2 + 200, y: 100)
+//#-end-hidden-code
 
 
 

@@ -7,15 +7,13 @@
 		<string>Chapter1.playgroundchapter</string>
 	</array>
 	<key>ContentIdentifier</key>
-	<string>com.example.PlaygroundBook</string>
+	<string>com.murawaki.LineBisectorTest</string>
 	<key>ContentVersion</key>
 	<string>1.0</string>
 	<key>DeploymentTarget</key>
 	<string>ios10.3</string>
 	<key>DevelopmentRegion</key>
 	<string>en</string>
-	<key>ImageReference</key>
-	<string>Answers.png</string>
 	<key>Name</key>
 	<string>Answers</string>
 	<key>SwiftVersion</key>

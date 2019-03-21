@@ -1,48 +1,32 @@
 {
-	"title": "Leonard Thomas",
-	"subtitle": "Leonard Thomas Playgroundbooks",
-	"publisherName": "Leonard Thomas",
-	"feedIdentifier": "com.leonardthomas",
-	"contactURL": "https://github.com/lennet/image-filtering",
-	"formatVersion": "1.0",	
-	"documents": [
-		{
-			"title": "Image Filtering",
-			"overviewSubtitle" : "Swift 4.2 Edition",
-			"detailSubtitle": "Learn about image filtering",
-			"description": "Many people think that digital signal processing is very complicated and quickly get deterred by mathematical formulas.  This  Playgroundbook shows that the fundamental concepts of DSP are way easier than they might look like with the example of convolving images with filter kernels.",
-			"contentIdentifier": "com.leonardthomas.imagefilter",
-			"contentVersion": "1.3",
-      "url": "https://github.com/murawakimitsuhiro/LineBisectorEdu/releases/download/v1.0/LineBisector.playgroundbook.zip",
-			"bannerImageURL": "https://raw.githubusercontent.com/lennet/image-filtering/master/banner_2x.png",
-			"thumbnailURL": "https://raw.githubusercontent.com/lennet/image-filtering/master/Image%20Filtering.playgroundbook/Contents/PrivateResources/cover.png",
-			"publishedDate": "2017-11-14T12:00:00+00:00",
-			"lastUpdatedDate": "2018-11-13T12:00:00+00:00",
-			"sha512": "e5059fc5d5a55e509a8207ae09cb8c1f392940282e1cd4ffbabb0409240de9b4bbd8abece401f0272f846248df2e6ddcd2dbdd21fc47a52ac32d073c4fb2b5e6",
-			"difficultyLevel" : "advanced",
-			"additionalInformation": [
-				{
-					"name": "Publisher:",
-					"value": "Leonard Thomas"
-				},
-				{
-					"name": "Version:",
-					"value": "1.3"
-				},
-				{
-					"type": "date",
-					"name": "Released:",
-					"value": "2018-11-13T12:00:00+00:00"
-				},
-				{
-					"name": "Languages:",
-					"value": "English"
-				}
-			],
-			"previewImageURLs": [
-					"https://raw.githubusercontent.com/lennet/image-filtering/master/Screenshots/Screenshot1.png",
-					"https://raw.githubusercontent.com/lennet/image-filtering/master/Screenshots/Screenshot2.png"
-			]
-		}
-	]
+    "title": "LineBisectorTest",
+    "publisherName": "Murawaki Mitsuhiro",
+    "feedIdentifier": "com.murawaki.playground",
+    "contactURL": "mitsuhiromurawaki@gmail.com",
+    "formatVersion": "1.0",
+    "documents": [
+        {
+            "title": "LineBisectorTest",
+            "overviewSubtitle": "線分二等分試験用のアプリ開発",
+            "detailSubtitle": "",
+            "description": "",
+            "contentIdentifier": "com.murawaki.playground.LineBisectorTest",
+            "contentVersion": "1.0",
+            "url": "https://github.com/murawakimitsuhiro/LineBisectorEdu/releases/download/v1.0/LineBisectorTest.playgroundbook.zip",
+            "publishedDate": "2018-05-18T12:00:00+00:00",
+            "lastUpdatedDate": "2018-05-18T12:00:00+00:00",
+            "thumbnailURL": "https://sonson.jp/playgrounds/playpixels/thumbnail.png",
+            "bannerImageURL": "https://sonson.jp/playgrounds/playpixels/thumbnail.png",
+            "additionalInformation": [
+                {
+                    "name": "Languages",
+                    "value": "English"
+                }
+            ],
+            "previewImageURLs": [
+                "https://sonson.jp/playgrounds/playpixels/preview00.png",
+                "https://sonson.jp/playgrounds/playpixels/preview01.png"
+            ]
+        }
+    ]
 }
