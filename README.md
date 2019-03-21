@@ -4,6 +4,8 @@
 
 Welcome to the Playground Book Xcode project! This Xcode project is set up to produce two things:
 
+Subscription feed: https://raw.githubusercontent.com/murawakimitsuhiro/LineBisectorEdu/master/feed.json or click [here](https://developer.apple.com/ul/sp0?url=https://raw.githubusercontent.com/murawakimitsuhiro/LineBisectorEdu/master/feed.json) on your iPad
+
 - A playground book
 - An app for debugging the live view
 
