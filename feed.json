@@ -16,8 +16,8 @@
             "publishedDate": "2018-05-18T12:00:00+00:00",
             "lastUpdatedDate": "2018-05-18T12:00:00+00:00",
             "sha512": "1f2c566a298bcd679717d33229733ca94ec165a5d0717b35f6f3c303f6364ea66c1db72fc098f6581b56acb73a50e0ef4c291a680a47b8fa98794c9e60697a77",
-            "thumbnailURL": "https://sonson.jp/playgrounds/playpixels/thumbnail.png",
-            "bannerImageURL": "https://sonson.jp/playgrounds/playpixels/thumbnail.png",
+            "thumbnailURL": "https://raw.githubusercontent.com/murawakimitsuhiro/LineBisectorEdu/master/images/thumbnail.png",
+            "bannerImageURL": "https://raw.githubusercontent.com/murawakimitsuhiro/LineBisectorEdu/master/images/banner_2x.png",
             "additionalInformation": [
                 {
                     "name": "Languages",
